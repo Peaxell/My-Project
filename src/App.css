@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    background: orchid;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: rgb(128, 128, 128);
+}
+
+.icon {
+    font-size: 2rem;
+    cursor: pointer;
+}

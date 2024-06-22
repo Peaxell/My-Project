@@ -1,0 +1,294 @@
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: max-content;
+    margin-bottom: 3rem;
+
+
+
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 187, 255, 0.23);
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: hard-light;
+    }
+
+    video {
+
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    .homeContent {
+        position: absolute;
+        width: 100%;
+        top: -6rem;
+        bottom: 0;
+        height: max-content;
+        display: flex;
+        padding: 8rem 1.5rem 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        margin: auto;
+        z-index: 1;
+        color: #fff;
+        font-size: 1.4rem;
+        margin-top: 3rem;
+
+
+        .text {
+            padding: 5rem 0;
+
+
+
+            .smallText {
+                font-size: 1.1rem;
+                text-transform: uppercase;
+            }
+
+            .homeTitle {
+                position: relative;
+                font-size: 3.5rem;
+                margin-bottom: -1.2rem;
+            }
+        }
+    }
+
+    .card {
+        position: relative;
+        padding: 2rem 1rem;
+        background: #fff;
+        border-radius: .4rem;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+
+
+
+
+        .icon {
+            color: #000000b7;
+            font-size: 1.4rem;
+        }
+
+
+
+
+
+
+        label {
+            display: block;
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            padding-bottom: .2rem;
+            font-weight: 500;
+        }
+
+        .label_total {
+            justify-content: space-between;
+            align-items: center;
+
+            .total {
+                color: #000;
+                font-size: 1.4rem;
+                padding: .9rem;
+
+            }
+
+        }
+
+        .input {
+            height: 3rem;
+            padding: 1rem 1rem;
+            background: #66666670;
+            border-radius: 1rem;
+            margin-bottom: 2rem;
+
+
+            input {
+                background: none;
+                outline: none;
+                border: none;
+                width: 100%;
+                font-size: 1.1rem;
+                font-weight: 500;
+
+                &::placeholder {
+                    font-size: 1rem;
+                    color: #000000ce;
+                }
+            }
+        }
+
+
+    }
+
+    .searchOptions {
+        position: absolute;
+        background: orchid;
+        bottom: -0.7rem;
+        width: max-content;
+        padding: .4rem .5rem;
+        column-gap: .5rem;
+        border-radius: 1rem;
+        transform: translate(-50%);
+        justify-content: center;
+        left: 50%;
+        cursor: pointer;
+
+
+        .icon {
+            color: #fff;
+        }
+
+        &:hover {
+            background: #333333;
+        }
+    }
+
+    .homeFooterIcons {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 0;
+        right: 1.4rem;
+        left: 1em;
+
+
+        .leftIcons,
+        .rightIcons {
+            display: flex;
+            column-gap: 2rem;
+
+            .icon {
+                &:hover {
+                    color: orchid;
+
+                }
+
+
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width:769px) {
+    .home {
+
+        video {
+            height: 46rem;
+        }
+
+        .homeContent {
+
+
+            .card {
+                grid-template-columns: repeat(2, 1fr);
+
+
+
+
+                .label_total {
+                    margin-bottom: -.8rem;
+                }
+            }
+
+
+
+            .text {
+                .smallText {
+                    font-size: 1.3rem;
+                }
+
+                .homeTitle {
+                    position: relative;
+                    font-size: 3.3rem;
+                    width: max-content;
+                    margin-top: 1rem;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 12.4rem;
+                        height: .3rem;
+                        background: orchid;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:769px) {
+    .home {
+
+        video {
+            height: 58rem;
+        }
+
+        .homeContent {
+
+
+
+            .text {
+                .smallText {
+                    font-size: 1.3rem;
+                }
+
+                .homeTitle {
+                    position: relative;
+                    font-size: 3.5rem;
+                    width: max-content;
+                    max-width: 20rem;
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .home {
+
+        video {
+            height: 40rem;
+        }
+
+        .homeContent {
+
+            .card {
+
+                grid-template-columns: repeat(3, 1fr);
+                padding: 3rem 1.9rem;
+
+                .priceInput {
+                    transform: translateY(-10px);
+
+
+                    .label_total {
+                        margin-bottom: -.8rem;
+                    }
+                }
+
+            }
+
+
+
+        }
+    }
+}
